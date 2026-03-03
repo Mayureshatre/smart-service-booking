@@ -22,7 +22,9 @@
         <form id="register-form">
             <input type="text" id="reg-name" placeholder="Full Name" required>
             <input type="email" id="reg-email" placeholder="Email Address" required>
-            <input type="password" id="reg-password" placeholder="Password" required>
+            <input type="password" id="reg-password" placeholder="Password" required required minlength="8"
+                maxlength="50" pattern="(?=.*[A-Z])(?=.*[0-9]).{8,}"
+                title="Password must be at least 8 characters long and include one uppercase letter and one number">
             <button type="submit" class="book-btn">Register</button>
         </form>
         <p id="reg-message"></p>
