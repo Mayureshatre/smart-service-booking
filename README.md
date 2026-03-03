@@ -74,14 +74,13 @@ Ensure you have the following installed on your local development machine:
 ### 2. Environment Variables
 
 Create a .env file in the root of your backend directory and add the following configuration:
+Code snippet for .env file:
 
 ```JavaScript
 
-Code snippet
 PORT=5000
 MONGO_URI=your_mongodb_connection_string_here
-JWT_SECRET=your_super_secret_jwt_key 3. Backend Initialization
-Open your terminal and navigate to the backend directory.
+JWT_SECRET=your_super_secret_jwt_key
 ```
 
 ### 3. Backend Initialization
