@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard - Smart Service Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <h2>Smart Service Booking</h2>
+        <div id="nav-links">
+            <a href="index.html">Home</a>
+            <button onclick="logout()" class="book-btn" style="background-color: #dc3545;">Logout</button>
+        </div>
+    </nav>
+
+    <main class="services-section">
+        <h2>My Booking History</h2>
+        <div id="bookings-container" class="grid-container">
+            <p>Loading your bookings...</p>
+        </div>
+    </main>
+
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Service Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <h2>Smart Service Booking</h2>
+        <div id="nav-links">
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </div>
+    </nav>
+
+    <main>
+        <header class="hero-section">
+            <div class="hero-content">
+                <h1>Find the Perfect Service</h1>
+                <p>Book top-rated professionals for any task, instantly.</p>
+
+                <div class="search-bar-container">
+                    <input type="text" id="search-input" onkeyup="filterServices()"
+                        placeholder="What service are you looking for?">
+                    <button id="search-btn" onclick="filterServices()">Search</button>
+                </div>
+            </div>
+        </header>
+
+        <section class="services-section">
+            <h2>Available Services</h2>
+            <div id="services-container" class="grid-container">
+                <p>Loading services...</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js">
+    </script>
+    <script>document.addEventListener("DOMContentLoaded", () => {
+            const token = localStorage.getItem('token');
+            const role = localStorage.getItem('userRole');
+            const navLinks = document.getElementById('nav-links');
+
+            if (token) {
+                if (role === 'admin') {
+                    navLinks.innerHTML = `
+                    <a href="admin.html" style="font-weight: bold; color: #ffc107;">Admin Panel</a>
+                    <button onclick="logout()" class="book-btn" style="background-color: #dc3545; padding: 5px 10px;">Logout</button>
+                `;
+                } else {
+                    navLinks.innerHTML = `
+                    <a href="dashboard.html" style="font-weight: bold; color: #28a745;">My Dashboard</a>
+                    <button onclick="logout()" class="book-btn" style="background-color: #dc3545; padding: 5px 10px;">Logout</button>
+                `;
+                }
+            }
+        });
+
+        function logout() {
+            localStorage.clear();
+            window.location.reload();
+        }</script>
+</body>
+
+</html>

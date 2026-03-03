@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #f4f7f6; /* Soft off-white background */
+  color: #333;
+  line-height: 1.6;
+}
+
+nav {
+  background: linear-gradient(
+    135deg,
+    #0f2027,
+    #203a43,
+    #2c5364
+  ); /* Sleek dark gradient */
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+#nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+#nav-links a:hover {
+  color: #4facfe;
+}
+
+.services-section {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.services-section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Auto-responsive */
+  gap: 25px;
+}
+
+.service-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Soft shadow */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  border-top: 5px solid #4facfe; /* Accent color on top */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-card:hover {
+  transform: translateY(-8px); /* Card floats up when hovered! */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.service-card strong {
+  color: #333;
+}
+
+.book-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: auto;
+}
+
+.book-btn:hover {
+  background: #0056b3;
+  transform: scale(1.02);
+}
+
+.auth-container {
+  max-width: 400px;
+  margin: 80px auto;
+  background: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.auth-container h2 {
+  color: #2c3e50;
+  margin-bottom: 25px;
+}
+
+.auth-container input,
+.auth-container select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 20px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: border 0.3s ease;
+}
+
+.auth-container input:focus {
+  border-color: #4facfe;
+  outline: none;
+  background-color: white;
+}
+
+.hero-section {
+  background: linear-gradient(
+    135deg,
+    #4facfe 0%,
+    #00f2fe 100%
+  ); /* Vibrant blue gradient */
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 35px;
+  opacity: 0.95;
+}
+
+.search-bar-container {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  background: white;
+  border-radius: 50px;
+  padding: 6px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar-container input {
+  flex: 1;
+  border: none;
+  padding: 15px 25px;
+  font-size: 1.1rem;
+  border-radius: 50px 0 0 50px;
+  outline: none;
+  color: #333;
+}
+
+.search-bar-container button {
+  background: #2c3e50; /* Dark contrast button */
+  color: white;
+  border: none;
+  padding: 15px 35px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
+}
+
+.search-bar-container button:hover {
+  background: #1a252f;
+  transform: scale(1.02);
+}
