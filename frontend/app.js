@@ -63,3 +63,21 @@ async function bookService(serviceId) {
 }
 
 window.onload = fetchServices;
+
+// Search Bar function
+function filterServices() {
+  const searchInput = document
+    .getElementById("search-input")
+    .value.toLowerCase();
+  const serviceCards = document.querySelectorAll(".service-card");
+
+  serviceCards.forEach((card) => {
+    const serviceName = card.querySelector("h3").textContent.toLowerCase();
+
+    if (serviceName.includes(searchInput)) {
+      card.style.display = "flex";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
